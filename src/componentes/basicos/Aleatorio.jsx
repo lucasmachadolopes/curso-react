@@ -1,7 +1,6 @@
 import React from 'react'
 
-
-export default (props) => {
+const Aleatorio = (props) => {
     const { min, max } = props;
 
     const randomBetween = parseInt(Math.random() * (max - min) + min)
@@ -16,3 +15,5 @@ export default (props) => {
         </>
     )
 }
+
+export default Aleatorio
