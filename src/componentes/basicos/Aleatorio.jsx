@@ -2,14 +2,17 @@ import React from 'react'
 
 
 export default (props) => {
-    const {min, max} = props;
+    const { min, max } = props;
 
     const randomBetween = parseInt(Math.random() * (max - min) + min)
     return (
         <>
+            <h1>Valor Aleatório</h1>
             <strong>{randomBetween} </strong>
             é um número aleatório entre
-            <strong> {props.min} e {props.max}</strong>
+            <strong> {props.min} </strong>
+            e
+            <strong> {props.max}</strong>
         </>
     )
 }
