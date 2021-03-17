@@ -2,33 +2,35 @@ import React from 'react'
 import produtos from '../../data/produtos'
 import './TabelaProdutos.css'
 
-const ListaAlunos = (props) => {
-    let cabecalhosTabela = <tr>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Preço</th>
-    </tr>
-    const itensTabela = produtos.map((produto) => {
-        return (
-            <tr key={produto.id}>
-                <td>{produto.id}</td>
-                <td>{produto.nome}</td>
-                <td>R$ {produto.preco.toFixed(2).replace('.', ',')}</td>
-            </tr>
-        );
-    })
+const TabelaProdutos = (props) => {
+    function getLinhas() {
+        return produtos.map((produto, i) => {
+            return (
+                <tr key={produto.id}
+                    className={i % 2 === 0 ? 'Par' : 'Impar'}>
+                    <td>{produto.id}</td>
+                    <td>{produto.nome}</td>
+                    <td>R$ {produto.preco.toFixed(2).replace('.', ',')}</td>
+                </tr>
+            )
+        })
+    }
     return (
         <div className="TabelaProdutos">
             <table>
                 <thead>
-                    {cabecalhosTabela}
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Preco</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    {itensTabela}
+                    {getLinhas()}
                 </tbody>
             </table>
         </div>
     )
 }
 
-export default ListaAlunos
+export default TabelaProdutos
