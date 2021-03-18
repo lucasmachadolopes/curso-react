@@ -11,7 +11,7 @@ const ListaAlunos = (props) => {
     })
     return (
         <div>
-            <ul style={{listStyle: 'none'}}>
+            <ul style={{ listStyle: 'none' }}>
                 {alunosLi}
             </ul>
         </div>

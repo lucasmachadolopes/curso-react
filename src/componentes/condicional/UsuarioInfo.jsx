@@ -1,9 +1,5 @@
 import React from 'react'
 import If, { Else } from './If'
-/**
-* @author
-* @function 
-**/
 
 export default props => {
     const usuario = props.usuario || {}
@@ -17,6 +13,4 @@ export default props => {
             </If>
         </div>
     )
-
 }
-
