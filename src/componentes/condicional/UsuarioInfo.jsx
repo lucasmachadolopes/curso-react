@@ -1,7 +1,7 @@
 import React from 'react'
 import If, { Else } from './If'
 
-export default props => {
+const UsuarioInfo = props => {
     const usuario = props.usuario || {}
     return (
         <div>
@@ -14,3 +14,5 @@ export default props => {
         </div>
     )
 }
+
+export default UsuarioInfo

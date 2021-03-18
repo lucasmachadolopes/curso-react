@@ -1,10 +1,10 @@
-export default props => {
+const If = props => {
     const elseChild = props.children.filter(child => {
         return child.type && child.type.name === 'Else'
     })[0]
 
     const ifChildren = props.children.filter(child => {
-        return child != elseChild
+        return child !== elseChild
     })
 
     if (props.test)
@@ -14,5 +14,7 @@ export default props => {
     else
         return false
 }
+
+export default If
 
 export const Else = props => props.children
