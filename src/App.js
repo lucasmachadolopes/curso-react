@@ -17,6 +17,7 @@ import TabelaProdutos from './componentes/repeticao/TabelaProdutos'
 import DiretaPai from './componentes/comunicacao/DiretaPai'
 import IndiretaPai from './componentes/comunicacao/IndiretaPai'
 import Input from './componentes/formulario/Input'
+import Contador from './componentes/contador/Contador'
 
 export default function App() {
     return (
@@ -24,14 +25,17 @@ export default function App() {
             <h1>Fundamentos de React</h1>
 
             <div className="Cards">
+                <Card titulo="#12 - Contador" color="#424242">
+                    <Contador numeroInicial={10} />
+                </Card>
                 <Card titulo="#11 - Comunicação Controlado" color="#E45F56">
-                <Input></Input>
+                    <Input></Input>
                 </Card>
                 <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
-                <IndiretaPai></IndiretaPai>
+                    <IndiretaPai></IndiretaPai>
                 </Card>
                 <Card titulo="#09 - Comunicação Direta" color="#59323C">
-                <DiretaPai></DiretaPai>
+                    <DiretaPai></DiretaPai>
                 </Card>
                 <Card titulo="#08 - Renderização Condicional" color="#982395">
                     <ParOuImpar numero={21}></ParOuImpar>
